@@ -1,3 +1,8 @@
+#mysql> CREATE USER 'select_api'@'localhost' IDENTIFIED BY 'some_pass';
+#mysql> GRANT ALL PRIVILEGES ON *.* TO 'select_api'@'localhost' WITH GRANT OPTION;
+#mysql> CREATE USER 'select_api'@'%' IDENTIFIED BY 'some_pass';
+#mysql> GRANT ALL PRIVILEGES ON *.* TO 'select_api'@'%' WITH GRANT OPTION;
+
 # Module Imports
 import mariadb
 import sys
@@ -7,11 +12,11 @@ import sys
 
 try:
     conn = mariadb.connect(
-        user="select_api",
-        password="some_pass",
-        host="192.168.75.44",
+        user="xxx",
+        password="xxx",
+        host="xxx",
         port=3306,
-        database="cdrlog"
+        database="xxx"
 
     )
 except mariadb.Error as e:
